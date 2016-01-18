@@ -5,6 +5,9 @@ var NewSkill = React.createClass({
     let name    = this.refs.name.value;
     let details = this.refs.details.value;
 
+
+
+
     // make ajax call and on success submit skill
     $.ajax({
       url: '/api/v1/skills',

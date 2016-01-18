@@ -4,6 +4,9 @@ var Skill = React.createClass({
     return { editable: false }
   },
 
+
+
+
   onUpdate() {
     if (this.state.editable) {
       // Define skill object

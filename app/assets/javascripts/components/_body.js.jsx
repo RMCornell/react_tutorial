@@ -13,6 +13,10 @@ var Body = React.createClass({
       });
   },
 
+
+
+
+
   handleSubmit(skill) {
     let newState = this.state.skills.concat(skill);
     this.setState({ skills: newState })
