@@ -48,18 +48,9 @@ var Body = React.createClass({
       data: { skill: skill },
       // on success update the skill
       success: (skill) => {
-        this.updateSkills(skill)
+        console.log("updated!")
       }
     });
-  },
-
-  // Update skill method used in ajax success call above
-  updateSkills(skill) {
-    let skills = this.state.skills.filter((s) => {
-      return s.id != id });
-    skills.push(skill);
-
-    this.setState({ skills: skills });
   },
 
   render() {
@@ -68,6 +59,7 @@ var Body = React.createClass({
       // Render all skills from _all_skill.js.jsx
       <div>
         <NewSkill handleSubmit={this.handleSubmit} />
+
 
         <AllSkills skills={this.state.skills}
                    handleDelete={this.handleDelete}

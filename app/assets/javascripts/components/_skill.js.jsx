@@ -31,14 +31,15 @@ var Skill = React.createClass({
   },
 
   canChangeLevel(action) {
-    let levels  = ['bad', 'halfbad', 'fantastic'];
+    let levels  = ['crap', 'mildcrap', 'highlevelcrap'];
     let index   = levels.indexOf(this.props.skill.level);
 
     return action === 'up' && index < 2 ||  action === 'down' && index > 0;
   },
 
   getNewLevel(action) {
-    let levels = ['bad', 'halfbad', 'fantastic'];
+
+    let levels = ['crap', 'mildcrap', 'highlevelcrap'];
     let level  = levels.indexOf(this.props.skill.level);
     let change = action === 'up' ? 1 : - 1;
 
@@ -65,16 +66,17 @@ var Skill = React.createClass({
         <div className='skill-level'>
           <button type="button"
                   className="btn btn-default btn-sm"
-                  onClick={this.onUpdateLevel.bind(this, 'down')}>
-            <span className="glyphicon glyphicon-triangle-bottom"></span>
+                  onClick={this.onUpdateLevel.bind(this, 'up')}>
+            <span className="glyphicon glyphicon-triangle-top"></span>
           </button>
 
           <p><strong>Level:</strong> {this.props.skill.level}</p>
 
           <button type="button"
                   className="btn btn-default btn-sm"
-                  onClick={this.onUpdateLevel.bind(this, 'up')}>
-            <span className="glyphicon glyphicon-triangle-top"></span>
+                  onClick={this.onUpdateLevel.bind(this, 'down')}>
+            <span className="glyphicon glyphicon-triangle-bottom"></span>
+
           </button>
         </div>
 
