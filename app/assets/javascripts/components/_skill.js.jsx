@@ -21,9 +21,9 @@ var Skill = React.createClass({
 
   onUpdateLevel(action) {
     if (this.canChangeLevel(action)) {
-      let level = this.getNewLevel(action);
+      var level = this.getNewLevel(action);
       // Define Skill Object for updating
-      let skill = {
+      var skill = {
         id: this.props.skill.id,
         level: level };
 
@@ -32,17 +32,17 @@ var Skill = React.createClass({
   },
 
   canChangeLevel(action) {
-    let levels  = ['crap', 'mildcrap', 'highlevelcrap'];
-    let index   = levels.indexOf(this.props.skill.level);
+    var levels  = ['crap', 'mildcrap', 'highlevelcrap'];
+    var index   = levels.indexOf(this.props.skill.level);
 
     return action === 'up' && index < 2 ||  action === 'down' && index > 0;
   },
 
   getNewLevel(action) {
 
-    let levels = ['crap', 'mildcrap', 'highlevelcrap'];
-    let level  = levels.indexOf(this.props.skill.level);
-    let change = action === 'up' ? 1 : - 1;
+    var levels = ['crap', 'mildcrap', 'highlevelcrap'];
+    var level  = levels.indexOf(this.props.skill.level);
+    var change = action === 'up' ? 1 : - 1;
 
     return action ? levels[level + change] : this.props.skill.level;
   },
@@ -54,7 +54,7 @@ var Skill = React.createClass({
 
       : <h3>{this.props.skill.name}</h3>;
 
-    let details = this.state.editable ? <textarea type='text'
+    var details = this.state.editable ? <textarea type='text'
                                                   ref='details'
                                                   defaultValue={this.props.skill.details}>
                                         </textarea>

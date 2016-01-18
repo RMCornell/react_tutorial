@@ -2,8 +2,8 @@ var NewSkill = React.createClass({
 
   handleClick() {
     // set variables for name and detials
-    let name    = this.refs.name.value;
-    let details = this.refs.details.value;
+    var name    = this.refs.name.value;
+    var details = this.refs.details.value;
 
     // make ajax call and on success submit skill
     $.ajax({

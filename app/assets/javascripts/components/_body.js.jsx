@@ -13,7 +13,7 @@ var Body = React.createClass({
   },
 
   handleSubmit(skill) {
-    let newState = this.state.skills.concat(skill);
+    var newState = this.state.skills.concat(skill);
     this.setState({ skills: newState })
   },
 
@@ -31,7 +31,7 @@ var Body = React.createClass({
 
   // Remove idea from dom method called in ajax success call above
   removeIdeaFromDOM(id) {
-    let newSkills = this.state.skills.filter((skill) => {
+    var newSkills = this.state.skills.filter((skill) => {
       return skill.id != id;
     });
 
