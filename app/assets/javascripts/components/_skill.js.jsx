@@ -4,9 +4,6 @@ var Skill = React.createClass({
     return { editable: false }
   },
 
-
-
-
   onUpdate() {
     if (this.state.editable) {
       // Define skill object
@@ -25,6 +22,7 @@ var Skill = React.createClass({
   onUpdateLevel(action) {
     if (this.canChangeLevel(action)) {
       let level = this.getNewLevel(action);
+      // Define Skill Object for updating
       let skill = {
         id: this.props.skill.id,
         level: level };

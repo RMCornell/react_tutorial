@@ -8,14 +8,9 @@ var Body = React.createClass({
   componentDidMount() {
     $.getJSON('/api/v1/skills.json',
       (response) => {
-        this.setState({ skills: response
-        })
+        this.setState({ skills: response })
       });
   },
-
-
-
-
 
   handleSubmit(skill) {
     let newState = this.state.skills.concat(skill);

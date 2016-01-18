@@ -5,16 +5,15 @@ var NewSkill = React.createClass({
     let name    = this.refs.name.value;
     let details = this.refs.details.value;
 
-
-
-
     // make ajax call and on success submit skill
     $.ajax({
       url: '/api/v1/skills',
       type: 'POST',
-      data: { skill: {
-        name: name,
-        details: details }
+      data: {
+        skill: {
+                  name: name,
+                  details: details
+                }
       },
       success: (skill) => {
         this.props.handleSubmit(skill);
